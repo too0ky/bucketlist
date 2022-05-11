@@ -9,10 +9,10 @@
 <div class="card-body">
     <form method="POST">
         {% csrf_token%}
-        <label>{{form.username.label}}</label>
+        <label>{{form.username.label}}: must be an email</label>
         {{form.username}}   
 
-        <label>{{form.password1.label}}</label>
+        <label>{{form.password1.label}}: must be at least 6 characters long & contain both a number and a symbol</label>
         {{form.password1}}   
 
         <label>{{form.password2.label}}</label>
